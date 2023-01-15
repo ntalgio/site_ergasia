@@ -7,7 +7,7 @@ if(process.env.NODE_ENV !== 'production'){
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
-const Subscriber = require("../fakesite/models/subscriber");
+const Subscriber = require("../models/subscriber");
 const mongoose = require("mongoose")
 const passport = require('passport')
 const initializePassport = require('./passport-config')
@@ -36,7 +36,7 @@ mongoose.connect(process.env.DATABASE_URL, {
 });
 
 app.get('/', function (req, res) {
-   res.sendFile(__dirname + '/public/www/page.html');
+   res.sendFile(__dirname + '/public/www/index.html');
 });
 
 function register(){
