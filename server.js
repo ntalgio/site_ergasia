@@ -7,7 +7,7 @@ if(process.env.NODE_ENV !== 'production'){
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
-const Subscriber = require("../models/subscriber");
+const Subscriber = require("./models/subscriber");
 const mongoose = require("mongoose")
 const passport = require('passport')
 const initializePassport = require('./passport-config')
