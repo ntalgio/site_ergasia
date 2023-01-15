@@ -7,7 +7,7 @@ if(process.env.NODE_ENV !== 'production'){
 const express = require('express')
 const app = express()
 const bcrypt = require('bcrypt')
-const Subscriber = require("../fakesite/models/subscriber");
+const Subscriber = require("./models/subscriber");
 const mongoose = require("mongoose")
 const passport = require('passport')
 const initializePassport = require('./passport-config')
@@ -39,35 +39,33 @@ app.get('/', function (req, res) {
    res.sendFile(__dirname + '/public/www/page.html');
 });
 
-function register(){
-   console.log({message: "mpike register"})
-   app.post('/', async (req,res)=>{
-      const subscriber = new Subscriber({
-         username: req.body.username,
-         password: req.body.password
-      })
-      try {
-         const hashedPassword = await bcrypt.hash(req.body.password, 10)
-         subscriber.password = hashedPassword
-      } catch (err){
-         res.redirect('/')
-      }
-      
-      try{
-         const newSubscriber = await subscriber.save()
-      } catch (err){
-         res.status(400).json({ message: err.message})
-      }
-      res.redirect('/')
+
+console.log({message: "mpike register"})
+app.post('/', async (req,res)=>{
+   const subscriber = new Subscriber({
+      username: req.body.username,
+      password: req.body.password
    })
+   try {
+      const hashedPassword = await bcrypt.hash(req.body.password, 10)
+      subscriber.password = hashedPassword
+   } catch (err){
+      res.redirect('/')
+   }
+   
+   try{
+      const newSubscriber = await subscriber.save()
+   } catch (err){
+      res.status(400).json({ message: err.message})
+   }
+   res.redirect('/')
+})
 
-}
 
-function login(){
-   app.post('/', passport.authenticate('local', {
-      failureFlash: true
-   }))
-}
+app.post('/', passport.authenticate('local', {
+   failureFlash: true
+}))
+
 
 
 const db = mongoose.connection
