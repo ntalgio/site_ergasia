@@ -1,0 +1,279 @@
+<head>
+    <title>Layout Grid</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type = "text/css"
+    href="/www/page.css" media="screen" />
+    <script src="/www/page.js"></script>
+</head>
+
+<body>
+    <div class="grid">
+        <header style="text-align:center">
+            ΜΙΚΗΣ ΘΕΟΔΩΡΑΚΗΣ
+        </header>
+
+        <nav> 
+            <ul class="nav" >
+                <li> <button class="float navHover" onclick="enableDisableAside('bio')";>Βιογραφία</button></li>
+                <li> <button class="float navHover" onclick="enableDisableAside('photo')";>Φωτογραφίες</button></li>
+                <li> <button class="float navHover" onclick="enableDisableAside('erga')";>Έργα</button></li>
+                <li> <button class="float navHover" onclick="enableDisableAside('site')";>Σύνδεσμοι</button></li>
+                <li> <button class="float navHover" onclick="enableDisableAside('control')";>Διαχείριση</button></li>
+            </ul>            
+        </nav>
+
+        <aside>
+            <ul class="asideheight fade-in-text" id="asideBio">
+                <button class="asidefloat asideHover" onclick="enableDisableMain('pxronia')";>Πρώτα χρόνια</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('polemos')";>Πόλεμος</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('spoudes')";>Σπουδές</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('politiki')";>Πολιτική</button>
+            </ul>
+            <ul class="asideheight fade-in-text" id="asidePhoto">
+                <button class="asidefloat asideHover" onclick="enableDisableMain('prwtesHm')";>1940-1960</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('defteresHm')";>1961-1970</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('tritesHm')";>1971-1980</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('tetartesHm')";>1981-1990</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('pemptesHm')";>1991-2021</button>
+            </ul>
+            <ul class="asideheight fade-in-text" id="asideErga">
+                <button class="asidefloat asideHover" onclick="enableDisableMain('theatro')";>Θέατρο</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('drama')";>Αρχαίο δράμα</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('kinimatografos')";>Κινηματογράφος</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('serga')";>Συμφωνικά έργα</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('vivlia')";>Βιβλία</button>
+            </ul>
+            <ul class="asideheight fade-in-text" id="asideSite">
+                <button class="asidefloat asideHover" onclick="enableDisableMain('vivlio')";>Βιβλιογραφία</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('parapompes')";>Παραπομπές</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('exsites')";>Διαδικτυακοί σύνδεσμοι</button>
+            </ul>
+            <ul class="asideheight fade-in-text" id="asideControl">
+                <button class="asidefloat asideHover" onclick="enableDisableMain('login')";>Σύνδεση</button>
+                <button class="asidefloat asideHover" onclick="enableDisableMain('register')";>Register</button>
+            </ul>
+            <ul class="asideheight fade-in-text" id="asideLogin">
+                <button class="asidefloat asideHover" onclick="handleClick()";>Διαχείριση Έργων</button>
+                <button class="asidefloat asideHover" onclick="handleClick()";>Διαχείριση συνδέσμων</button>
+            </ul>
+        </aside>
+        
+        <main>
+            <div id="prwtaXronia">
+                <p class="mainHeader">
+                    Πρώτα χρόνια
+                </p>
+                <p class="mainText fade-in-text">
+                    Ο Μίκης Θεοδωράκης γεννήθηκε στις 29 Ιουλίου 1925 στη Χίο. Η καταγωγή του πατέρα του, Γιώργη Θεοδωράκη, Μπιζανομάχου,
+                    ήταν από τον Γαλατά Χανίων με πρόγονους τους επαναστάτες της Εθνεγερσίας του 1821 Χάληδες και της μητέρας του,
+                    Ασπασίας Πουλάκη, από την Κρήνη (Τσεσμέ) της Μικράς Ασίας. Οι γονείς του συναντήθηκαν στη Μικρά Ασία, λίγο πριν από 
+                    τη Μικρασιατική Καταστροφή.Τα παιδικά του χρόνια ο Μίκης Θεοδωράκης τα πέρασε σε διάφορες πόλεις της ελληνικής 
+                    επαρχίας όπως τη Χίο, τη Μυτιλήνη, τα Γιάννενα, το Αργοστόλι, τον Πύργο, την Πάτρα και κυρίως στην Τρίπολη, λόγω των 
+                    συχνών μεταθέσεων του δημοσίου υπαλλήλου πατέρα του. Μεγάλωσε με την ελληνική λαϊκή μουσική και επηρεάστηκε από τη 
+                    βυζαντινή μουσική· ενώ βρισκόταν στην παιδική του ηλικία είχε ήδη εκφράσει την επιθυμία του να γίνει συνθέτης.
+                </p>
+                <p class="mainText fade-in-text">
+                    Λέγεται ότι στην ηλικία των 12 ετών έγραψε το πρώτο του τραγούδι. Τη διετία 1937-1939 πήρε τα πρώτα μαθήματα βιολιού 
+                    στο Ωδείο Πατρών και δημιούργησε τα πρώτα του τραγούδια, συνθέσεις οι οποίες βασίστηκαν σε στίχους των Σολωμού, Παλαμά,
+                    Δροσίνη και Βαλαωρίτη, τους οποίους έβρισκε άλλοτε στα σχολικά βιβλία και άλλοτε στη βιβλιοθήκη του σπιτιού του. 
+                    Τα πρώτα του μουσικά ακούσματα ήταν οι ψαλμωδίες της Ορθόδοξης Εκκλησίας, στις οποίες έπαιρνε μέρος σαν ψάλτης.
+                    Στην Πάτρα ασχολήθηκε και με τον αθλητισμό, αθλητής του Ναυτικού Ομίλου διακρίθηκε κυρίως στο κρόουλ και συμμετείχε ακόμα 
+                    και σε πανελλήνιους αγώνες.
+                </p>
+                <p class="mainText fade-in-text">
+                    Στην Τρίπολη, μόλις 17 ετών, δίνει την πρώτη του συναυλία παρουσιάζοντας το έργο του Κασσιανή και παίρνει μέρος στην αντίσταση 
+                    κατά των κατακτητών.[48] Στη μεγάλη διαδήλωση της 25ης Μαρτίου 1943 συλλαμβάνεται για πρώτη φορά από τους Ιταλούς και βασανίζεται. 
+                    Διαφεύγει στην Αθήνα, όπου οργανώνεται στο ΚΚΕ και στον ΕΛΑΣ, εκτελεί χρέη διαφωτιστή στον Πέμπτο Τομέα της ΕΠΟΝ, ενώ αγωνίζεται 
+                    και ως διμοιρίτης της Μεταξωτής διμοιρίας του 1ου τάγματος της Νέας Σμύρνης κατά τα Δεκεμβριανά.[49] Συγχρόνως σπουδάζει στο Ωδείο Αθηνών 
+                    με καθηγητή τον Φιλοκτήτη Οικονομίδη.[43]
+                </p>
+            </div>
+            <div id="polemos">
+                <p class="mainHeader">
+                    Πολεμος
+                </p>
+                <p class="mainText fade-in-text">
+                    Μετά τα Δεκεμβριανά, καταδιώκεται από τις αστυνομικές αρχές. Για ένα διάστημα ζει παράνομα στην Αθήνα. Συλλαμβάνεται στις μαζικές συλλήψεις 
+                    στις 9/10 Ιουλίου 1947, και κατόπιν στέλνεται εξόριστος με σχετική ελευθερία κινήσεων στην Ικαρία όπου είναι ο κομματικός υπεύθυνος 
+                    του χωριού εξορίας, από όπου θα προσπαθήσει ανεπιτυχώς να αποδράσει με τους άλλους εξόριστους υπό τον Βασίλη Ζάννο. Με τη γενικευμένη 
+                    αμνηστία που δίνει η κυβέρνηση του Θεμιστοκλή Σοφούλη περνάει στην παρανομία στην προσπάθεια συμμετοχής σε ένοπλες ομάδες του Δημοκρατικού 
+                    Στρατού Αθηνών και βρίσκεται στην ομάδα του Παύλου Παπαμερκουρίου. Συλλαμβάνεται ξανά στο σπίτι του πατέρα του όπου βρήκε καταφύγιο 
+                    όντας άρρωστος από πλευρίτιδα, αλλά στη συνέχεια στέλνεται ξανά εξόριστος στην Ικαρία, αυτή τη φορά σε συνθήκες πειθαρχηµένης διαβίωσης για 
+                    λίγους μήνες, όπου γράφει το έργο «Ελεγείο και θρήνος στον Βασίλη Ζάννο» στη μνήμη του Βασίλη Ζάννου που εκτελέστηκε το 1948. Έπειτα στέλνεται 
+                    στο στρατόπεδο της Μακρονήσου όπου βασανίζεται μέχρι παράλυσης. Σύμφωνα με κάποιες πηγές, στις 18 Απριλίου 1949 κάνει δήλωση μετανοίας, 
+                    ενώ ο ίδιος το έχει αρνηθεί. Μετά από παρέμβαση του πατέρα και του θείου του, ανώτερων κρατικών υπαλλήλων, απολύεται ως ανάπηρος.
+                </p>
+            </div>
+            <div id="spoudes">
+                <p class="mainHeader">
+                    Σπουδές
+                </p>
+                <p class="mainText fade-in-text">
+                    Στα τέλη του 1949 στέλνεται στα Χανιά όπου και αναρρώνει. Το 1950 όμως επιστρέφει στην Αθήνα από όπου αποφοιτά από το Ωδείο με δίπλωμα 
+                    στην αρμονία. Ύστερα υπηρετεί το υπόλοιπο της θητείας σε Αλεξανδρούπολη, Αθήνα και Χανιά. Το 1950 αποπειράται να αυτοκτονήσει λόγω 
+                    των συνεχών προκλήσεων που αντιμετώπιζε, όμως γλύτωσε τον κίνδυνο και το 1951 απολύεται οριστικά από τον στρατό. Το 1954 μεταναστεύει 
+                    με κρατική υποτροφία στο Παρίσι όπου εγγράφεται στο Ωδείο (γαλλική ονομασία Conservatoire) και σπουδάζει με τον Ολιβιέ Μεσιάν, 
+                    για σύντομο χρονικό διάστημα, μουσική ανάλυση, καθώς επίσης και διεύθυνση ορχήστρας με τον Εζέν Μπιγκό. Συνθέτει μουσική για 
+                    το μπαλέτο της Λουντμίλα Τσέρινα, το Κόβεντ Γκάρντεν, το Μπαλέτο της Στουτγκάρδης και επίσης για τον κινηματογράφο. Το 1957 του απονέμεται 
+                    το πρώτο βραβείο του Φεστιβάλ της Μόσχας από τον Σοστακόβιτς για το έργο του Σουίτα No 1 για πιάνο και ορχήστρα. Συγχρόνως συνθέτει πολλά 
+                    έργα συμφωνικής μουσικής και μουσικής δωματίου.
+                </p>
+            </div>
+            <div id="politiki">
+                <p class="mainHeader">
+                    Πολιτική
+                </p>
+                <p class="mainText fade-in-text">
+                    Ο Μίκης Θεοδωράκης εκλέγεται για πρώτη φορά βουλευτής στις εκλογές του 1964 στην Εκλογική περιφέρεια Β΄ Πειραιώς με την Ενιαία Δημοκρατική Αριστερά. 
+                    Το 1974 θέτει υποψηφιότητα με το ψηφοδέλτιο της Ενωμένης Αριστεράς στην ίδια περιφέρεια, όμως δεν κατάφερε να εκλεγεί. Έλαβε 6.345 σταυρούς 
+                    προτίμησης και κατέλαβε την τρίτη θέση ανάμεσα σε 8 υποψηφίους. Ο συνδυασμός κατέκτησε μία έδρα. Το 1978, μετά από πρόταση που δέχτηκε, αποφάσισε να 
+                    θέσει υποψηφιότητα για τη δημαρχία της Αθήνας, υποστηριζόμενος από το Κομμουνιστικό Κόμμα Ελλάδας. Ο συνδυασμός του έλαβε 59.428 ψήφους (ποσοστό 16,32%) 
+                    καταλαμβάνοντας την τρίτη θέση, πίσω από τους συνδυασμούς των Γιώργου Πλυτά και Δημήτρη Μπέη.
+                </p>
+                <p class="mainText fade-in-text">
+                    Το 1981 καταφέρνει να εκλεγεί βουλευτής στην εκλογική περιφέρεια της Βʹ Πειραιά με το ψηφοδέλτιο του Κ.Κ.Ε, λαμβάνοντας 13.785 σταυρούς προτίμησης, 
+                    πρώτη θέση ανάμεσα σε 10 υποψήφιους (μοναδική έδρα για το κόμμα στη συγκεκριμένη περιφέρεια). Επανεξελέγη το 1985, αυτή τη φορά τοποθετημένος στην πρώτη 
+                    θέση του Κ.Κ.Ε στο ψηφοδέλτιο Επικρατείας. Τον Μάιο του 1986 σε συνέντευξή τύπου στην Κολωνία ανακοίνωσε πως παραιτείται από βουλευτής, επειδή η Βουλή 
+                    αδυνατεί να φέρει τις πολιτικές αλλαγές που χρειάζονται. Διευκρίνισε πως παραμένει μέλος του ΚΚΕ και ότι θα συνεχίσει να εργάζεται για την πολιτική 
+                    αλλαγή σαν απλός πολίτης.[113]Τον Νοέμβριο του 1989 εξελέγη βουλευτής, με το ψηφοδέλτιο Επικρατείας της Νέας Δημοκρατίας. Το 1990 ήταν υποψήφιος βουλευτής 
+                    στην τρίτη θέση του ψηφοδελτίου Επικρατείας της Νέας Δημοκρατίας, και εξελέγη, Διατέλεσε Υπουργός Επικρατείας στην κυβέρνηση του Κωνσταντίνου Μητσοτάκη, 
+                    μέχρι την παραίτησή του την 1η Απριλίου 1992.
+                </p>
+                <p class="mainText fade-in-text">
+                    Την 1η Δεκεμβρίου 2010 ο Μίκης Θεοδωράκης ανακοίνωσε την ίδρυση Κινήματος Ανεξάρτητων Πολιτών με την ονομασία «Σπίθα». Το Σεπτέμβριο του 2013 αποφάσισε με 
+                    επιστολή του να αποστρατευτεί από τη «Σπίθα».Το 2015, κατά την εκλογή του ΣΥΡΙΖΑ ως κυβέρνηση αρχικά διάκειται ευνοϊκά προς αυτή, αλλά στη συνέχεια της 
+                    άσκησε έντονη κριτική. Στο Δημοψήφισμα της 5ης Ιουλίου 2015 τάχθηκε υπέρ του Όχι. Την ημέρα του θανάτου του, ο γενικός γραμματέας της Κ.Ε. του ΚΚΕ, 
+                    Δημήτρης Κουτσούμπας, δημοσιοποίησε επιστολή του Μίκη προς τον ίδιο με ημερομηνία 5 Οκτωβρίου 2020. Σε αυτήν ανέφερε χαρακτηριστικά: «Τώρα στο τέλος της ζωής μου, την ώρα των απολογισμών, 
+                    σβήνουν απ’ το μυαλό μου οι λεπτομέρειες και μένουν τα “Μεγάλα Μεγέθη”. Έτσι βλέπω ότι τα πιο κρίσιμα, τα δυνατά και τα ώριμα χρόνια μου τα πέρασα κάτω από τη σημαία του ΚΚΕ. 
+                    Για το λόγο αυτό θέλω να αφήσω αυτόν τον κόσμο σαν κομμουνιστής». Του ζήτησε, επίσης, να επιληφθεί προσωπικά ώστε να γίνει σεβαστή όχι μονάχα η ιδεολογία του αλλά και οι αγώνες του για την ενότητα των Ελλήνων.
+                </p>
+            </div>
+            <div class="fade-in-text" id="theatro"></div>
+            <div class="fade-in-text" id="drama"></div>
+            <div class="fade-in-text" id="kinimatografos"></div>
+            <div class="fade-in-text" id="serga"></div>
+            <div class="fade-in-text" id="vivlia"></div>
+            <div id="prwtesHm">
+                <p class="mainHeader">
+                    1940-1960
+                </p>
+                <div class="flex">
+                    <img class= "images fade-in-text" src="/1940/b_23658_or_66.jpg" >
+                    <img class= "images fade-in-text" src="/1940/b_23695_or_103 (1).jpg" >
+                    <img class= "images fade-in-text" src="/1940/b_23743_or_152.jpg" >
+                    <img class= "images fade-in-text" src="/1940/b_23867_or_27f8.jpg" >
+                    <img class= "images fade-in-text" src="/1940/b_23909_or_320.jpg" >
+                    <img class= "images fade-in-text" src="/1940/m_23916_328.jpg" >
+                </div>
+            </div>
+            <div id="defteresHm">
+                <p class="mainHeader">
+                    1961-1970
+                </p>
+                <div class="flex"> 
+                    <img class= "images fade-in-text" src="/1960/b_23660_or_68.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23661_or_69.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23665_or_73.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23667_or_75.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23681_or_89.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23682_or_90.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23684_or_92.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23687_or_95.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23696_or_104.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23732_or_141.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23688_or_96.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23910_or_321.jpg" >
+                    <img class= "images fade-in-text" src="/1960/b_23995_or_407.jpg" >
+                </div>
+            </div>
+            <div id="tritesHm">
+                <p class="mainHeader">
+                    1971-1980
+                </p>
+                <div class="flex"> 
+                    <img class= "images fade-in-text" src="/1970/b_23759_or_168.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23771_or_180.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23785_or_194.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23790_or_199.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23791_or_200.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23795_or_204.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23797_or_206.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_23989_or_401.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_24006_or_1001.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_24011_or_1006.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_24023_or_1018.jpg" >
+                    <img class= "images fade-in-text" src="/1970/b_24039_or_1034.jpg" >
+                </div>
+            </div>
+            <div id="tetartesHm">
+                <p class="mainHeader">
+                    1981-1990
+                </p>
+                <div class="flex"> 
+                    <img class= "images fade-in-text" src="/1980/b_23894_or_305.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_23899_or_310.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_23906_or_317.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_23922_or_334.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_23925_or_337.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_23939_or_351.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_24043_or_1038.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_24044_or_1039.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_24045_or_1040.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_24047_or_1042.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_24051_or_1046.jpg" >
+                    <img class= "images fade-in-text" src="/1980/b_24054_or_1049.jpg" >
+                </div>
+            </div>
+            <div id="pemptesHm">
+                <p class="mainHeader">
+                    1981-1990
+                </p>
+                <div class="flex">
+                    <img class= "images fade-in-text" src="/1990/b_23965_or_377.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23974_or_386.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23975_or_387.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23977_or_389.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23979_or_391.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23981_or_393.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23982_or_394.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_23983_or_395.jpg" >
+                    <img class= "images fade-in-text" src="/1990/b_24003_or_415.jpg" >
+                </div>
+            </div>
+            <div class="fade-in-text" id="vivlio"> </div>
+            <div class="fade-in-text" id="exsites"> </div>
+            <div class="fade-in-text" id="parapompes"> </div>
+            <div >
+                <form class="fade-in-text" id="register" action="/" method="POST">
+                    <div class="container"> 
+                        <label for="username">Username : </label> 
+                        <input type="username text" id="username" placeholder="Enter Username" name="username" required>
+                        <label for="password">Password : </label> 
+                        <input type="password" id="password" placeholder="Enter Password" name="password" required >
+                        <button type="submit">Register</button> 
+                    </div> 
+                </form>
+            </div>
+            <div >
+                <form class="fade-in-text" id="login" action="/" method="POST">
+                    <div class="container"> 
+                        <label for="username">Username : </label> 
+                        <input type="username text" id="username" placeholder="Enter Username" name="username" required>
+                        <label for="password">Password : </label> 
+                        <input type="password" id="password" placeholder="Enter Password" name="password" required>
+                        <button type="submit">Login</button> 
+                        <input type="checkbox" checked="checked"> Remember me  
+                    </div> 
+                </form>
+            </div>
+
+        </main>
+
+        <footer>
+        </footer>
+    </div>
+</body>
+
+</html>

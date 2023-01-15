@@ -1,0 +1,26 @@
+GET   http://127.0.0.1:3000/subscribers
+###
+
+GET   http://127.0.0.1:3000/subscribers/63c2969d58ca3b921a5ce47d
+
+###
+
+POST http://127.0.0.1:3000/subscribers
+Content-Type: application/json
+
+{
+    "username": "kimwnas",
+    "password": "skata"
+}
+
+###
+
+DELETE http://127.0.0.1:3000/subscribers/63c2981da928c8105cba8e77
+
+###
+PATCH http://127.0.0.1:3000/subscribers/63c2969d58ca3b921a5ce47d
+Content-Type: application/json
+
+{
+    "username": "Ntinos"
+}
